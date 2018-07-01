@@ -7,29 +7,29 @@ package:
 source:
   url: https://github.com/uclouvain/openjpeg/archive/v{{ version }}.tar.gz
   sha256: 3dc787c1bb6023ba846c2a0d9b1f6e179f1cd255172bde9eb75b01f1e6c7d71a
+  patches:
+    - CVE-2018-7648-6d8c0c06ee32dc03ba80acd48334e98728e56cf5.patch
 
 build:
-  number: 2
-  skip: True  # [win and py36]
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  number: 3
+  run_exports:
+    # good compatibility in 2.x series, check before new release
+    # http://www.openjpeg.org/abi-check/timeline/openjpeg/
+    - {{ pin_subpackage('openjpeg') }}
 
 requirements:
   build:
-    - python  # [win]
     - cmake
-    - libtiff >=4.0.8,<4.0.10
-    - libpng >=1.6.32,<1.6.35
-    - zlib 1.2.11
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - libtiff
+    - libpng
+    - zlib
   run:
-    - libtiff >=4.0.8,<4.0.10
-    - libpng >=1.6.32,<1.6.35
-    - zlib 1.2.11
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
+    - libtiff
+    - libpng
+    - zlib
 
 test:
   files:
@@ -47,5 +47,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - ocefpaf
     - gillins
+    - mingwandroid
+    - ocefpaf
