@@ -11,7 +11,7 @@ source:
     - CVE-2018-7648-6d8c0c06ee32dc03ba80acd48334e98728e56cf5.patch
 
 build:
-  number: 3
+  number: 1003
   run_exports:
     # good compatibility in 2.x series, check before new release
     # http://www.openjpeg.org/abi-check/timeline/openjpeg/
