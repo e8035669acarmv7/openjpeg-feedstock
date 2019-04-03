@@ -6,9 +6,7 @@ package:
 
 source:
   url: https://github.com/uclouvain/openjpeg/archive/v{{ version }}.tar.gz
-  sha256: 95934ad245648506973dfd3ec08cef30c308f476a808913b65290d59c9067039
-  patches:
-    - CVE-2018-7648-6d8c0c06ee32dc03ba80acd48334e98728e56cf5.patch
+  sha256: 63f5a4713ecafc86de51bfad89cc07bb788e9bba24ebbf0c4ca637621aadb6a9
 
 build:
   number: 0
