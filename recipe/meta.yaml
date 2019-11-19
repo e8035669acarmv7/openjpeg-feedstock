@@ -10,6 +10,7 @@ source:
 
 build:
   number: 2
+  skip: True  # [win and vc<14]
   run_exports:
     # good compatibility in 2.x series, check before new release
     # http://www.openjpeg.org/abi-check/timeline/openjpeg/
@@ -35,12 +36,10 @@ test:
     - p0_01.j2k
   commands:
     - opj_dump -i p0_01.j2k
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
     home: http://www.openjpeg.org/
-    license: BSD 2-Clause
+    license: BSD-2-Clause
     license_file: LICENSE
     summary: 'An open-source JPEG 2000 codec written in C'
 
