@@ -11,7 +11,7 @@ cxx_compiler:
 libpng:
 - '1.6'
 libtiff:
-- 4.0.10
+- 4.1.0
 pin_run_as_build:
   libpng:
     max_pin: x.x
