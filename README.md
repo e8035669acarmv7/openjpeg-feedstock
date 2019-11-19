@@ -3,7 +3,7 @@ About openjpeg
 
 Home: http://www.openjpeg.org/
 
-Package license: BSD 2-Clause
+Package license: BSD-2-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -78,17 +78,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008cxx_compilervs2008target_platformwin-64</td>
+              <td>win_c_compilervs2015cxx_compilervs2015target_platformwin-64vc14</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=718&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openjpeg-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008cxx_compilervs2008target_platformwin-64" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_c_compilervs2015cxx_compilervs2015target_platformwin-64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=718&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openjpeg-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openjpeg-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015cxx_compilervs2015target_platformwin-64vc14" alt="variant">
                 </a>
               </td>
             </tr>

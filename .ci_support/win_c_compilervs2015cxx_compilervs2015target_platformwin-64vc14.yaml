@@ -17,12 +17,17 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
+  vc:
+    max_pin: x
   zlib:
     max_pin: x.x
 target_platform:
 - win-64
+vc:
+- '14'
 zip_keys:
-- - c_compiler
+- - vc
+  - c_compiler
   - cxx_compiler
 zlib:
 - '1.2'
