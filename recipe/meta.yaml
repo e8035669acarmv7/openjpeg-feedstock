@@ -9,7 +9,8 @@ source:
   sha256: 63f5a4713ecafc86de51bfad89cc07bb788e9bba24ebbf0c4ca637621aadb6a9
 
 build:
-  number: 1
+  number: 2
+  skip: True  # [win and vc<14]
   run_exports:
     # good compatibility in 2.x series, check before new release
     # http://www.openjpeg.org/abi-check/timeline/openjpeg/
@@ -18,7 +19,8 @@ build:
 requirements:
   build:
     - cmake
-    - make
+    - make  # [not win]
+    - ninja  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
@@ -35,12 +37,10 @@ test:
     - p0_01.j2k
   commands:
     - opj_dump -i p0_01.j2k
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
     home: http://www.openjpeg.org/
-    license: BSD 2-Clause
+    license: BSD-2-Clause
     license_file: LICENSE
     summary: 'An open-source JPEG 2000 codec written in C'
 
