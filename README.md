@@ -1,11 +1,11 @@
-About openjpeg
-==============
+About openjpeg-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openjpeg-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.openjpeg.org/
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openjpeg-feedstock/blob/main/LICENSE.txt)
 
 Summary: An open-source JPEG 2000 codec written in C
 
