@@ -19,7 +19,7 @@ docker_image:
 libpng:
 - '1.6'
 libtiff:
-- '4.5'
+- '4.6'
 target_platform:
 - linux-armv7l
 zip_keys:
